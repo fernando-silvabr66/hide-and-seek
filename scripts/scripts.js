@@ -24,7 +24,7 @@ const arrayProjects = [
   {
     id: 'my-proj-1',
     title: 'Multi-Post Stories',
-    image: '/images/proj-img.png',
+    image: '../images/proj-img.png',
     imageclass: 'img-1-3',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
@@ -36,7 +36,7 @@ const arrayProjects = [
   {
     id: 'my-proj-2',
     title: 'Multi-Post Stories',
-    image: '/images/proj-img.png',
+    image: '../images/proj-img.png',
     imageclass: 'img-2-4',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
@@ -48,7 +48,7 @@ const arrayProjects = [
   {
     id: 'my-proj-3',
     title: 'Multi-Post Stories',
-    image: '/images/proj-img.png',
+    image: '../images/proj-img.png',
     imageclass: 'img-1-3',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
@@ -60,7 +60,7 @@ const arrayProjects = [
   {
     id: 'my-proj-4',
     title: 'Multi-Post Stories',
-    image: '/images/proj-img.png',
+    image: '../images/proj-img.png',
     imageclass: 'img-2-4',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
@@ -82,7 +82,7 @@ function showInnerItems(index) {
         <i id="closer" class="fa fa-times"></i>
       </div>
       <div class="my-popup-img">
-        <img src="/images/popup-img.png" alt="Project Screenshot" />
+        <img src="../images/popup-img.png" alt="Project Screenshot" />
       </div>
       <div class="my-popup-project-detail">
         <p>
@@ -98,7 +98,7 @@ function showInnerItems(index) {
         </ul>
       </div>
       <div class="my-popup-footer">
-        <button class="my-popup-btn">${arrayProjects[index].firstButton} <img src="/images/live-icon.png" ></button>
+        <button class="my-popup-btn">${arrayProjects[index].firstButton} <img src="../images/live-icon.png" ></button>
         <button class="my-popup-btn">${arrayProjects[index].secondButton} <i class="fab fa-github"></i></button>
       </div>
     </div>
@@ -159,3 +159,27 @@ arrayProjects.forEach((project) => {
     displayPopup(project.index);
   });
 });
+
+const contactForm = document.querySelector('#my-contact-form'); // OK
+
+const emailAddress = document.getElementById('user-email');
+
+const errorMessage = document.getElementById('email-error-message');
+
+contactForm.addEventListener('submit', (e) => {
+
+  if (!validateEmail(emailAddress.value)) {
+    errorMessage.innerHTML = 'Please, enter only lower case in e-mail address field !';    
+    e.preventDefault();
+  } else {
+    contactForm.submit();
+  }
+});
+
+function validateEmail(emailAddress) {
+  const validValues = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
+  if (validValues.test(emailAddress)) {
+    return true;
+  }
+  return false;
+}
