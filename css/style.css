@@ -112,6 +112,7 @@ body {
 
 .my-popup-footer {
   text-align: center;
+  flex-direction: row;
 }
 
 .my-popup-btn {
@@ -498,12 +499,19 @@ textarea {
   color: #81818c;
 }
 
-#user-email::placeholder {
+
+#form-email-error-message {
+  color: red;
+  font-size: 12px;
+  width: 100%;
+}
+
+#form-user-email::placeholder {
   color: #191765;
   padding-left: 10px;
 }
 
-#user-name::placeholder {
+#form-user-name::placeholder {
   padding-left: 10px;
 }
 
@@ -511,13 +519,13 @@ textarea::placeholder {
   padding-left: 10px;
 }
 
-.submit-button {
+.form-submit-button {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#submit {
+#form-submit-btn {
   background-color: #7d73fc;
   color: #edecff;
   font-family: Roboto, sans-serif;
@@ -569,9 +577,9 @@ textarea::placeholder {
   flex-direction: column;
 }
 
-.user-info,
-.user-email,
-.user-message {
+.form-user-info,
+.form-user-email,
+.form-user-message {
   text-align: center;
 }
 

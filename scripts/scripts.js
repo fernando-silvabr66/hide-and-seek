@@ -159,3 +159,27 @@ arrayProjects.forEach((project) => {
     displayPopup(project.index);
   });
 });
+
+// contact-form validation work
+
+const contactForm = document.querySelector('#my-contact-form');
+const formEmail = document.getElementById('form-user-email');
+const formErrorMessage = document.getElementById('form-email-error-message');
+
+function validateEmail(formEmail) {
+  const validChar = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
+  if (validChar.test(formEmail)) {
+    return true;
+  }
+  return false;
+}
+
+contactForm.addEventListener('form-submit-btn', (e) => {
+  if (!validateEmail(formEmail.value)) {
+    formErrorMessage.innerHTML = '(*) Please enter a valid email address (lower case)';
+    // alert()
+    e.preventDefault();
+  } else {
+    contactForm.submit();
+  }
+});
