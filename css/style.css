@@ -52,7 +52,6 @@ body {
   display: none;
 }
 
-/* popup containter */
 .my-project-det {
   display: none;
 }
@@ -111,8 +110,9 @@ body {
 }
 
 .my-popup-footer {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  flex-direction: row;
 }
 
 .my-popup-btn {
@@ -398,6 +398,11 @@ body {
   border-right: 0 solid #191765;
 }
 
+.my-proj.btn {
+  display: flex;
+  align-items: center;
+}
+
 .my-btn {
   margin-top: 15px;
   background-color: #7d73fc;
@@ -499,19 +504,12 @@ textarea {
   color: #81818c;
 }
 
-
-#form-email-error-message {
-  color: red;
-  font-size: 12px;
-  width: 100%;
-}
-
-#form-user-email::placeholder {
+#user-email::placeholder {
   color: #191765;
   padding-left: 10px;
 }
 
-#form-user-name::placeholder {
+#user-name::placeholder {
   padding-left: 10px;
 }
 
@@ -519,13 +517,36 @@ textarea::placeholder {
   padding-left: 10px;
 }
 
-.form-submit-button {
+#form-email-error-message {
+  color: red;
+  font-size: 14px;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  align-self: center;
+}
+
+.submit-button {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#form-submit-btn {
+.lblFormError {
+  /* font-family: 'Poppins', sans-serif; */
+  font-style: normal;
+  font-weight: 200;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0;
+  color: red !important;
+}
+
+.MenuInvisible {
+  display: none;
+}
+
+#submit {
   background-color: #7d73fc;
   color: #edecff;
   font-family: Roboto, sans-serif;
@@ -577,9 +598,9 @@ textarea::placeholder {
   flex-direction: column;
 }
 
-.form-user-info,
-.form-user-email,
-.form-user-message {
+.user-info,
+.user-email-addr,
+.user-message {
   text-align: center;
 }
 
@@ -610,7 +631,7 @@ textarea::placeholder {
   .my-popup-footer {
     text-align: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .my-popup-btn {
@@ -628,6 +649,11 @@ textarea::placeholder {
   .my-proj-3,
   .my-proj-4 {
     display: flex;
+  }
+
+  .my-proj.btn {
+    display: flex;
+    align-items: flex-start;
   }
 
   .my-recent-work-title {

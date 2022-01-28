@@ -24,7 +24,7 @@ const arrayProjects = [
   {
     id: 'my-proj-1',
     title: 'Multi-Post Stories',
-    image: '/images/proj-img.png',
+    image: '../images/proj-img.png',
     imageclass: 'img-1-3',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
@@ -36,7 +36,7 @@ const arrayProjects = [
   {
     id: 'my-proj-2',
     title: 'Multi-Post Stories',
-    image: '/images/proj-img.png',
+    image: '../images/proj-img.png',
     imageclass: 'img-2-4',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
@@ -48,7 +48,7 @@ const arrayProjects = [
   {
     id: 'my-proj-3',
     title: 'Multi-Post Stories',
-    image: '/images/proj-img.png',
+    image: '../images/proj-img.png',
     imageclass: 'img-1-3',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
@@ -60,7 +60,7 @@ const arrayProjects = [
   {
     id: 'my-proj-4',
     title: 'Multi-Post Stories',
-    image: '/images/proj-img.png',
+    image: '../images/proj-img.png',
     imageclass: 'img-2-4',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
@@ -82,7 +82,7 @@ function showInnerItems(index) {
         <i id="closer" class="fa fa-times"></i>
       </div>
       <div class="my-popup-img">
-        <img src="/images/popup-img.png" alt="Project Screenshot" />
+        <img src="../images/popup-img.png" alt="Project Screenshot" />
       </div>
       <div class="my-popup-project-detail">
         <p>
@@ -98,7 +98,7 @@ function showInnerItems(index) {
         </ul>
       </div>
       <div class="my-popup-footer">
-        <button class="my-popup-btn">${arrayProjects[index].firstButton} <img src="/images/live-icon.png" ></button>
+        <button class="my-popup-btn">${arrayProjects[index].firstButton} <img src="../images/live-icon.png" ></button>
         <button class="my-popup-btn">${arrayProjects[index].secondButton} <i class="fab fa-github"></i></button>
       </div>
     </div>
@@ -118,7 +118,7 @@ function displayPopup(param) {
 const projContainer = document.querySelector('.my-grid-container');
 
 arrayProjects.forEach((project) => {
-  // alert()
+  
   const container = document.createElement('div');
 
   container.innerHTML = `
@@ -160,26 +160,6 @@ arrayProjects.forEach((project) => {
   });
 });
 
-// contact-form validation work
-
-const contactForm = document.querySelector('#my-contact-form');
-const formEmail = document.getElementById('form-user-email');
-const formErrorMessage = document.getElementById('form-email-error-message');
-
-function validateEmail(formEmail) {
-  const validChar = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
-  if (validChar.test(formEmail)) {
-    return true;
-  }
-  return false;
-}
-
-contactForm.addEventListener('form-submit-btn', (e) => {
-  if (!validateEmail(formEmail.value)) {
-    formErrorMessage.innerHTML = '(*) Please enter a valid email address (lower case)';
-    // alert()
-    e.preventDefault();
-  } else {
-    contactForm.submit();
-  }
-});
+const form = document.querySelector('#my-contact-form');
+const email = document.getElementById('user-email');
+const errorMessage = document.getElementById('form-email-error-message');
