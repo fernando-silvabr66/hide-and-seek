@@ -160,21 +160,11 @@ arrayProjects.forEach((project) => {
   });
 });
 
-const contactForm = document.querySelector('#my-contact-form'); // OK
+const contactForm = document.querySelector('#my-contact-form');
 
 const emailAddress = document.getElementById('user-email');
 
 const errorMessage = document.getElementById('email-error-message');
-
-contactForm.addEventListener('submit', (e) => {
-
-  if (!validateEmail(emailAddress.value)) {
-    errorMessage.innerHTML = 'Please, enter only lower case in e-mail address field !';    
-    e.preventDefault();
-  } else {
-    contactForm.submit();
-  }
-});
 
 function validateEmail(emailAddress) {
   const validValues = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
@@ -183,3 +173,12 @@ function validateEmail(emailAddress) {
   }
   return false;
 }
+
+contactForm.addEventListener('submit', (e) => {
+  if (!validateEmail(emailAddress.value)) {
+    errorMessage.innerHTML = 'Please, enter only lower case in e-mail address field !';
+    e.preventDefault();
+  } else {
+    contactForm.submit();
+  }
+});

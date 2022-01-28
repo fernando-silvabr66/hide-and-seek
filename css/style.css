@@ -113,7 +113,6 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-
 }
 
 .my-popup-btn {
@@ -596,7 +595,6 @@ textarea::placeholder {
 }
 
 @media screen and (min-width: 992px) {
-
   .my-popup-project-detail {
     max-width: 60%;
     text-align: center;
