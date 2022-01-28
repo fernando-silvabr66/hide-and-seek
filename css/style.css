@@ -52,6 +52,84 @@ body {
   display: none;
 }
 
+/* popup containter */
+.my-project-det {
+  display: none;
+}
+
+.my-project-popup {
+  position: fixed;
+  display: flex;
+  box-shadow: 0 48px 48px rgba(37 47 137 / 8%);
+  border: 1px solid #fff;
+  min-width: 70%;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  margin: 1% 15% 10%;
+  z-index: 1;
+  top: 0;
+  right: 10%;
+  left: 0%;
+  overflow-y: auto;
+  background-color: #373767;
+}
+
+.my-popup-header {
+  min-width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  color: white;
+}
+
+.my-popup-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.my-popup-img img {
+  max-width: 50%;
+  align-items: center;
+  align-self: center;
+}
+
+.my-popup-project-detail {
+  max-width: 90%;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.my-project-detail-header {
+  display: none;
+}
+
+.my-popup-footer {
+  text-align: center;
+}
+
+.my-popup-btn {
+  background-color: #7d73fc;
+  box-shadow: 0 8px 16px rgba(125 115 252 / 48%);
+  width: 98px;
+  min-height: 38px;
+  border: none;
+  margin: 20px;
+  color: white;
+  font-size: 10px;
+}
+
+.my-popup-btn img {
+  width: 10%;
+  padding-left: 10px;
+}
+
 .my-workl {
   display: none;
 }
@@ -223,6 +301,7 @@ body {
 }
 
 .my-soc-icons {
+  padding: 1px;
   color: white;
   list-style: none;
   display: flex;
@@ -367,7 +446,7 @@ body {
   color: #9490ff;
 }
 
-.my-grid-container {
+.my-proj-container {
   display: grid;
   grid-gap: 20px;
 }
@@ -510,6 +589,32 @@ textarea::placeholder {
 }
 
 @media screen and (min-width: 992px) {
+  .my-popup-project-detail {
+    max-width: 60%;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    line-height: 30px;
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  .my-popup-footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .my-popup-btn {
+    background-color: #7d73fc;
+    box-shadow: 0 8px 16px rgba(125 115 252 / 48%);
+    min-width: 108px;
+    min-height: 48px;
+    border: none;
+    margin: 30px;
+    color: white;
+  }
+
   .my-proj-1,
   .my-proj-2,
   .my-proj-3,
