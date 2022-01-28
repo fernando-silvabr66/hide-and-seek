@@ -110,7 +110,10 @@ body {
 }
 
 .my-popup-footer {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+
 }
 
 .my-popup-btn {
@@ -396,6 +399,11 @@ body {
   border-right: 0 solid #191765;
 }
 
+.my-proj.btn {
+  display: flex;
+  align-items: center;
+}
+
 .my-btn {
   margin-top: 15px;
   background-color: #7d73fc;
@@ -588,6 +596,7 @@ textarea::placeholder {
 }
 
 @media screen and (min-width: 992px) {
+
   .my-popup-project-detail {
     max-width: 60%;
     text-align: center;
@@ -601,7 +610,7 @@ textarea::placeholder {
   .my-popup-footer {
     text-align: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .my-popup-btn {
@@ -619,6 +628,11 @@ textarea::placeholder {
   .my-proj-3,
   .my-proj-4 {
     display: flex;
+  }
+
+  .my-proj.btn {
+    display: flex;
+    align-items: flex-start;
   }
 
   .my-recent-work-title {
