@@ -198,3 +198,11 @@ contactForm.addEventListener('keyup', (e) => {
 });
 
 const getData = JSON.parse(localStorage.getItem('formData'));
+
+window.onload = () => {
+  if (getData != null) {
+    document.getElementById('user-name').value = getData.userName;
+    document.getElementById('user-email').value = getData.userEmail;
+    document.getElementById('user-message').value = getData.userMessage;
+  }
+};
