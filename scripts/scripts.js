@@ -159,20 +159,23 @@ arrayProjects.forEach((project) => {
   });
 });
 
-const form = document.querySelector('#my-contact-form');
-const email = document.getElementById('user-email');
+const contactForm = document.querySelector('#my-contact-form');
+const emailAddress = document.getElementById('user-email');
 const errorMessage = document.getElementById('form-email-error-message');
 
-function validateEmail(email) {
-  const regEx = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
-  return regEx.test(email);
+function validateEmail(emailAddress) {
+  const validValues = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
+  if (validValues.test(emailAddress)) {
+    return true;
+  }
+  return false;
 }
 
-form.addEventListener('submit', (e) => {
-  if (!validateEmail(email.value)) {
-    errorMessage.innerHTML = 'The email address should be lower case!';
+contactForm.addEventListener('submit', (e) => {
+  if (!validateEmail(emailAddress.value)) {
+    errorMessage.innerHTML = 'Please, enter only lower case in e-mail address field !';
     e.preventDefault();
   } else {
-    form.submit();
+    contactForm.submit();
   }
 });
