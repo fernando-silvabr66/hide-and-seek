@@ -163,3 +163,17 @@ arrayProjects.forEach((project) => {
 const form = document.querySelector('#my-contact-form');
 const email = document.getElementById('user-email');
 const errorMessage = document.getElementById('form-email-error-message');
+
+function validateEmail(email) {
+  const regEx = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
+  return regEx.test(email);
+}
+
+form.addEventListener('submit', (e) => {
+  if (!validateEmail(email.value)) {
+    errorMessage.innerHTML = 'The email address should be lower case!';    
+    e.preventDefault();
+  } else {
+    form.submit();
+  }
+});
