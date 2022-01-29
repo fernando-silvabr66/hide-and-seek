@@ -118,7 +118,6 @@ function displayPopup(param) {
 const projContainer = document.querySelector('.my-grid-container');
 
 arrayProjects.forEach((project) => {
-  
   const container = document.createElement('div');
 
   container.innerHTML = `
@@ -171,7 +170,7 @@ function validateEmail(email) {
 
 form.addEventListener('submit', (e) => {
   if (!validateEmail(email.value)) {
-    errorMessage.innerHTML = 'The email address should be lower case!';    
+    errorMessage.innerHTML = 'The email address should be lower case!';
     e.preventDefault();
   } else {
     form.submit();

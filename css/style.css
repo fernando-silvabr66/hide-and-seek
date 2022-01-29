@@ -521,8 +521,8 @@ textarea::placeholder {
   color: red;
   font-size: 14px;
   width: 100%;
-  margin: 0px;
-  padding: 0px;
+  margin: 1px;
+  padding: 1px;
   align-self: center;
 }
 
@@ -530,20 +530,6 @@ textarea::placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.lblFormError {
-  /* font-family: 'Poppins', sans-serif; */
-  font-style: normal;
-  font-weight: 200;
-  font-size: 13px;
-  line-height: 15px;
-  letter-spacing: 0;
-  color: red !important;
-}
-
-.MenuInvisible {
-  display: none;
 }
 
 #submit {
