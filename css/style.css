@@ -111,7 +111,7 @@ body {
 
 .my-popup-footer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   text-align: center;
 }
 
@@ -617,7 +617,7 @@ textarea::placeholder {
   .my-popup-footer {
     text-align: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .my-popup-btn {
