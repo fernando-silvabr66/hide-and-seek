@@ -179,3 +179,22 @@ contactForm.addEventListener('submit', (e) => {
     contactForm.submit();
   }
 });
+
+function storeData(userName, userEmail, userMessage) {
+  const formData = {
+    userName,
+    userEmail,
+    userMessage,
+  };
+  localStorage.setItem('formData', JSON.stringify(formData));
+}
+
+contactForm.addEventListener('keyup', (e) => {
+  e.preventDefault();
+  const name = document.getElementById('user-name').value;
+  const email = document.getElementById('user-email').value;
+  const message = document.getElementById('user-message').value;
+  storeData(name, email, message);
+});
+
+const getData = JSON.parse(localStorage.getItem('formData'));
