@@ -118,7 +118,6 @@ function displayPopup(param) {
 const projContainer = document.querySelector('.my-grid-container');
 
 arrayProjects.forEach((project) => {
-  // alert()
   const container = document.createElement('div');
 
   container.innerHTML = `
@@ -161,10 +160,8 @@ arrayProjects.forEach((project) => {
 });
 
 const contactForm = document.querySelector('#my-contact-form');
-
 const emailAddress = document.getElementById('user-email');
-
-const errorMessage = document.getElementById('email-error-message');
+const errorMessage = document.getElementById('form-email-error-message');
 
 function validateEmail(emailAddress) {
   const validValues = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;

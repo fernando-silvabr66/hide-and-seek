@@ -123,20 +123,13 @@
                 <h6 class="my-work-title"><a href="#">Work</a></h6>
             </div>
         </div>
-    </div>
-
-    <!-- <section class="my-project-det">
-      <h2></h2>
-    </section> -->
-    
+    </div>    
     <section class="my-recent-work" id="my-recent-work">
         <h3 class="my-recent-work-title">MY RECENT WORK</h3>
         <hr class="my-hrbar">
-
         <div class="my-project-det">
             <h2></h2>
-        </div>        
-        
+        </div>
         <div class="my-grid-container"></div>        
     </section>
 
@@ -147,11 +140,14 @@
             <div class="user-info">
                 <input type="text" id="user-name" name="user-first-name"  placeholder="Enter your name here" required maxlength="30"  />
             </div>
-            <div class="user-email">
+            <div class="user-email-addr">
                 <input type="email" id="user-email" name="user-email" required placeholder="Email address" >
             </div>
             <div class="user-message">
                 <textarea id="user-message" name="user-message" maxlength="500" placeholder="Write your message here" required ></textarea>
+            </div>
+            <div class="error-msg">
+                <p id="form-email-error-message"></p>
             </div>
             <div class="submit-button">
                 <button id="submit" type="submit" class="my-btn">Submit</button>

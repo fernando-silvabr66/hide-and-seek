@@ -517,6 +517,15 @@ textarea::placeholder {
   padding-left: 10px;
 }
 
+#form-email-error-message {
+  color: red;
+  font-size: 14px;
+  width: 100%;
+  margin: 1px;
+  padding: 1px;
+  align-self: center;
+}
+
 .submit-button {
   display: flex;
   flex-direction: column;
@@ -576,7 +585,7 @@ textarea::placeholder {
 }
 
 .user-info,
-.user-email,
+.user-email-addr,
 .user-message {
   text-align: center;
 }
